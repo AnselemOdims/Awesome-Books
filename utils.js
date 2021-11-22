@@ -22,3 +22,5 @@ const utilsObj = {
     document.querySelector('#author').value = '';
   },
 };
+
+module.exports = utilsObj;
