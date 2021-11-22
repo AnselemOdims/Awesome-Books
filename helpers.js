@@ -1,6 +1,16 @@
-import utilsObj from './utils.js';
+/* eslint-disable import/prefer-default-export */
+import { utilsObj } from './utils.js';
 
-const helperObj = {
+/**
+ * @object helperObj to hold all helper methods
+ */
+export const helperObj = {
+
+  /**
+   * @function add - helper method for addition of books to localStorage
+   * @param {string} title - The title of the book to be added
+   * @param {string} author - The author of the book to be added
+   */
   add(title, author) {
     const books = JSON.parse(localStorage.getItem('books')) || [];
     let id;
@@ -12,8 +22,14 @@ const helperObj = {
     books.push({ id, title, author });
     localStorage.setItem('books', JSON.stringify(books));
     utilsObj.render(title, author, id);
+    utilsObj.clearInput();
   },
 
+  /**
+   * @function
+   * @param {Object} e - The event object
+   * @param {string} id - The string id of the button dataset
+   */
   remove(e, id) {
     id = parseInt(id, 10);
     const stack = JSON.parse(localStorage.getItem('books'));
@@ -22,6 +38,9 @@ const helperObj = {
     e.currentTarget.parentElement.remove();
   },
 
+  /**
+   * @function display - helper function to display books on load
+   */
   display() {
     const stack = JSON.parse(localStorage.getItem('books'));
     if (stack) {
@@ -37,5 +56,3 @@ const helperObj = {
     });
   },
 };
-
-module.exports = helperObj;

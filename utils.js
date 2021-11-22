@@ -1,7 +1,17 @@
-const lists = document.querySelector('#lists');
+/* eslint-disable import/prefer-default-export */
 
-const utilsObj = {
+/**
+ * @object utilsObj to hold all utils methods
+ */
+export const utilsObj = {
 
+  /**
+   * @function displayHTML
+   * @param {string} title - The title of the book to be added
+   * @param {string} author - The author of the book to be added
+   * @param {number} id - The id assigned to the button
+   * @returns - The HTML structure of each book component
+   */
   displayHTML(title, author, id) {
     return `
   <li class="book" style="list-style:none;">
@@ -13,14 +23,21 @@ const utilsObj = {
   `;
   },
 
+  /**
+   * @function render - helper function to render HTML on page
+   * @param {string} title - The title of the book to be added
+   * @param {string} author - The author of the book to be added
+   * @param {number} id - The id assigned to the button
+   */
   render(title, author, id) {
-    lists.insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
+    document.querySelector('#lists').insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
   },
 
+  /**
+   * @function clearInput - helper function to clear inputs on add
+   */
   clearInput() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
   },
 };
-
-module.exports = utilsObj;

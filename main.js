@@ -1,21 +1,17 @@
-import helperObj from "./helpers.js";
+import { helperObj } from './helpers.js';
 
+// display the books in the localStorage on load
 helperObj.display();
 
-const addBtn = document.querySelector("#add-btn");
-
-addBtn.addEventListener("click", (e) => {
-  let title = document.querySelector("#title").value;
-  let author = document.querySelector("#author").value;
-  if (title === "" || author === "") {
-    alert("Please input a valid input");
-  } else {
-    add(title, author);
-    clearInput();
+// Event listener for the addition to localStorage and rendering of HTML to page
+document.querySelector('#add-btn').addEventListener('click', () => {
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  if (title === '' || author === '') {
+    return;
   }
-  document.querySelectorAll(".remove").forEach((elem) => {
-    elem.addEventListener("click", (e) =>
-      remove(e, e.currentTarget.dataset.id)
-    );
+  helperObj.add(title, author);
+  document.querySelectorAll('.remove').forEach((elem) => {
+    elem.addEventListener('click', (e) => helperObj.remove(e, e.currentTarget.dataset.id));
   });
 });
