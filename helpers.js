@@ -21,6 +21,21 @@ const helperObj = {
     localStorage.setItem('books', JSON.stringify(remStack));
     e.currentTarget.parentElement.remove();
   },
+
+  display() {
+    const stack = JSON.parse(localStorage.getItem('books'));
+    if (stack) {
+      stack.forEach((item) => {
+        const { id, title, author } = item;
+        if (stack.length > 0) utilsObj.render(title, author, id);
+      });
+    }
+    document.querySelectorAll('.remove').forEach((elem) => {
+      elem.addEventListener('click', (e) => {
+        this.remove(e, e.currentTarget.dataset.id);
+      });
+    });
+  },
 };
 
 module.exports = helperObj;
