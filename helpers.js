@@ -1,8 +1,8 @@
-import utilsObj from "../utils.js";
+import utilsObj from './utils.js';
 
 const helperObj = {
   add(title, author) {
-    let books = JSON.parse(localStorage.getItem("books")) || [];
+    const books = JSON.parse(localStorage.getItem('books')) || [];
     let id;
     if (books.length === 0) {
       id = 0;
@@ -10,7 +10,17 @@ const helperObj = {
       id = books.length;
     }
     books.push({ id, title, author });
-    localStorage.setItem("books", JSON.stringify(books));
-    render(title, author, id);
+    localStorage.setItem('books', JSON.stringify(books));
+    utilsObj.render(title, author, id);
+  },
+
+  remove(e, id) {
+    id = parseInt(id, 10);
+    const stack = JSON.parse(localStorage.getItem('books'));
+    const remStack = stack.filter((item) => item.id !== id);
+    localStorage.setItem('books', JSON.stringify(remStack));
+    e.currentTarget.parentElement.remove();
   },
 };
+
+module.exports = helperObj;
