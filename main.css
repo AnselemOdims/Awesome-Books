@@ -1,0 +1,171 @@
+/* Google font import */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;300&display=swap");
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background: #f4f5f7;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Books Styles */
+.books {
+  padding: 20px 20px;
+}
+
+.books h2,
+.books p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Line */
+.line {
+  width: 50px;
+  height: 2px;
+  margin: auto;
+  border: none;
+  background: #6070ff;
+}
+
+/* Form Styles */
+form {
+  width: 60%;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.form-controls {
+  margin: 10px 0;
+}
+
+.form-controls input {
+  padding: 10px 15px;
+  width: 100%;
+  border: solid 1px #a0a9fc;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-btn button {
+  border: none;
+  background: #6070ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background ease-out 0.5s 0.2s;
+  width: 170px;
+  height: 45px;
+  font-family: Poppins, sans-serif;
+}
+
+.book button {
+  background: #fff;
+  border: solid 2px rgb(196, 5, 5);
+  padding: 4px 20px;
+  transition: background ease-out 0.5s 0.1s;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.form-btn button:hover {
+  background: #4958da;
+}
+
+.form-btn button:focus {
+  background: #3041db;
+}
+
+.form-btn button:disabled {
+  background: #acacad;
+  color: rgb(41, 41, 41);
+}
+
+/* List card styles */
+.legend {
+  border: solid 2px #6070ff;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  position: relative;
+  -webkit-animation: slide-right ease-out 1s;
+  -moz-animation: slide-right ease-out 1s;
+  animation: slide-right ease-out 1s;
+}
+
+@keyframes slide-right {
+  from {
+    right: -800px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.book button:hover {
+  background: rgb(196, 5, 5);
+  cursor: pointer;
+  color: #fff;
+}
+
+.book p .title {
+  font-weight: bold;
+}
+
+.book p .author {
+  color: #6070ff;
+  font-weight: bold;
+}
+
+form .error {
+  color: red;
+  font-size: 12px;
+}
+
+.books:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.books h2 {
+  margin: 50px 0;
+}
+
+@media (min-width: 768px) {
+  .book button {
+    padding: 10px 50px;
+  }
+}
