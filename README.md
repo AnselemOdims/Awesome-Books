@@ -27,8 +27,9 @@ To get a local copy up and running follow these simple example steps.
   -  [Node](https://nodejs.org/en/download/)
 ### Usage
   - Clone the repository using  "git clone git@github.com:AnselemOdims/Portfolio.git"
-  -  cd into the project folder
-  -  Run npm install
+  - cd into the project folder
+  - Run npm install
+  - Start the project using LiveServer extension or open project in a browser
 
 ## Authors
 
