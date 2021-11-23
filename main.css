@@ -91,4 +91,12 @@ form {
 }
 
 /* List card styles */
+.legend {
+  border: solid 2px #6070ff;
+  padding: 20px;
+}
 
+.book {
+  display: flex;
+  justify-content: space-between;
+}
