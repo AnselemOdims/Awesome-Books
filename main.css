@@ -89,3 +89,11 @@ form {
   background: #acacad;
   color: rgb(41, 41, 41);
 }
+
+/* List card styles */
+.legend {
+  border: solid 2px #6070ff;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
