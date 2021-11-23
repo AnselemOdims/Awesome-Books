@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Awesome Books</title>
-	</head>
-	<body>
-		<main>
-			<section class="books">
-				<h2>All awesome Books</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="books">
+        <h2>All awesome Books</h2>
         <div class="legend">
-				<p id="no-data"></p>
-				<ul id="lists"></ul>
-      </div>
-			</section>
-			<section class="books">
-				<h2>Add a new book</h2>
-				<form>
-					<div class="form-controls">
-						<input type="text" placeholder="Title" id="title" />
-					</div>
-					<div class="form-controls">
-						<input type="text" placeholder="Author" id="author" />
-					</div>
-          <div>
-					<button type="button" id="add-btn">Add</button>
+          <p id="no-data"></p>
+          <ul id="lists"></ul>
         </div>
-				</form>
-			</section>
-		</main>
-		<script src="main.js" type="module"></script>
-	</body>
+      </section>
+      <section class="books">
+        <div class="line"></div>
+        <h2>Add a new book</h2>
+        <form>
+          <div class="form-controls">
+            <input type="text" placeholder="Title" id="title" />
+          </div>
+          <div class="form-controls">
+            <input type="text" placeholder="Author" id="author" />
+          </div>
+          <div class="form-btn">
+            <button type="button" id="add-btn">Add</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
