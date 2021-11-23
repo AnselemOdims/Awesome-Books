@@ -1,80 +1,84 @@
 /* Google font import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;300&display=swap");
 
 /* Reset Styles */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Global styles */
 body {
-	font-size: 16px;
-	font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 ul li {
-	list-style: none;
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 main {
-	background: #f4f5f7;
-	width: 100%;
-	height: 100vh;
+  background: #f4f5f7;
+  width: 100%;
+  height: 100vh;
 }
 
 /* Books Styles */
 .books {
-	padding: 20px 20px;
+  padding: 20px 20px;
 }
 
 .books h2,
 .books p {
-	text-align: center;
-	margin: 10px 0;
+  text-align: center;
+  margin: 10px 0;
 }
 
 /* Line */
 .line {
-	width: 100px;
-	height: 2px;
-	margin: auto;
-	border: none;
-	background: #6070ff;
+  width: 100px;
+  height: 2px;
+  margin: auto;
+  border: none;
+  background: #6070ff;
 }
 
 /* Form Styles */
 form {
-	width: 60%;
-	margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .form-controls {
-	margin: 10px 0;
+  margin: 10px 0;
 }
 
 .form-controls input {
-	padding: 10px 15px;
-	width: 100%;
+  padding: 10px 15px;
+  width: 100%;
+  border: solid 1px #a0a9fc;
 }
 
 .form-btn {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .form-btn button {
-	/* padding: 8px 40px; */
-	border: none;
-	background: #6070ff;
-	color: #fff;
+  border: none;
+  background: #6070ff;
+  color: #fff;
   cursor: pointer;
   transition: background ease-out 0.5s 0.2s;
+  width: 170px;
+  height: 45px;
+  font-family: Poppins, sans-serif;
 }
 
 .form-btn button:hover {
@@ -106,9 +110,9 @@ form {
   padding: 15px;
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
   position: relative;
-  -webkit-animation:  slide-right 1s;
-  -moz-animation:  slide-right 1s;
-  animation:  slide-right 1s;
+  -webkit-animation: slide-right 1s;
+  -moz-animation: slide-right 1s;
+  animation: slide-right 1s;
 }
 
 @keyframes slide-right {
@@ -128,7 +132,7 @@ form {
   border: solid 2px rgb(196, 5, 5);
   padding: 10px 50px;
   transition: background ease-out 0.5s 0.1s;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
 
@@ -138,11 +142,11 @@ form {
   color: #fff;
 }
 
-.book p .title{
+.book p .title {
   font-weight: bold;
 }
 
 .book p .author {
- color: #6070ff;
- font-weight: bold;
+  color: #6070ff;
+  font-weight: bold;
 }
