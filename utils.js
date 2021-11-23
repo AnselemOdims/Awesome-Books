@@ -1,9 +1,8 @@
-/* eslint-disable import/prefer-default-export */
-
+/* eslint-disable class-methods-use-this */
 /**
  * @object utilsObj to hold all utils methods
  */
-export class Utils {
+export default class Utils {
   /**
    * @function displayHTML
    * @param {string} title - The title of the book to be added
@@ -30,15 +29,15 @@ export class Utils {
    */
   render(title, author, id) {
     document
-      .querySelector("#lists")
-      .insertAdjacentHTML("beforeend", this.displayHTML(title, author, id));
+      .querySelector('#lists')
+      .insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
   }
 
   /**
    * @function clearInput - helper function to clear inputs on add
    */
   clearInput() {
-    document.querySelector("#title").value = "";
-    document.querySelector("#author").value = "";
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
   }
 }
