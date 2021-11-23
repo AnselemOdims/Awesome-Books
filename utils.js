@@ -3,7 +3,12 @@
 /**
  * @object utilsObj to hold all utils methods
  */
-export const utilsObj = {
+export class Utils {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
 
   /**
    * @function displayHTML
@@ -15,13 +20,13 @@ export const utilsObj = {
   displayHTML(title, author, id) {
     return `
   <li class="book" style="list-style:none;">
-    <p>${title}</p>
-    <p>${author}</p>
-    <button class="remove" data-id=${id}>Remove</button>
+    <p>${this.title}</p>
+    <p>${this.author}</p>
+    <button class="remove" data-id=${this.id}>Remove</button>
     <hr>
   </li>
   `;
-  },
+  }
 
   /**
    * @function render - helper function to render HTML on page
@@ -30,14 +35,16 @@ export const utilsObj = {
    * @param {number} id - The id assigned to the button
    */
   render(title, author, id) {
-    document.querySelector('#lists').insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
-  },
+    document
+      .querySelector("#lists")
+      .insertAdjacentHTML("beforeend", this.displayHTML(title, author, id));
+  }
 
   /**
    * @function clearInput - helper function to clear inputs on add
    */
   clearInput() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#author').value = '';
-  },
-};
+    document.querySelector("#title").value = "";
+    document.querySelector("#author").value = "";
+  }
+}
