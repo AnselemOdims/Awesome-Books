@@ -130,7 +130,7 @@ form {
 .book button {
   background: #fff;
   border: solid 2px rgb(196, 5, 5);
-  padding: 10px 50px;
+  padding: 4px 20px;
   transition: background ease-out 0.5s 0.1s;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -149,4 +149,10 @@ form {
 .book p .author {
   color: #6070ff;
   font-weight: bold;
+}
+
+@media(min-width: 768px) {
+  .book button {
+    padding: 10px 50px;
+  }
 }
