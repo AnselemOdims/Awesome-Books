@@ -1,10 +1,8 @@
-/* eslint-disable import/prefer-default-export */
-
+/* eslint-disable class-methods-use-this */
 /**
  * @object utilsObj to hold all utils methods
  */
-export const utilsObj = {
-
+export default class Utils {
   /**
    * @function displayHTML
    * @param {string} title - The title of the book to be added
@@ -14,14 +12,14 @@ export const utilsObj = {
    */
   displayHTML(title, author, id) {
     return `
-  <li class="book" style="list-style:none;">
-    <p>${title}</p>
-    <p>${author}</p>
-    <button class="remove" data-id=${id}>Remove</button>
-    <hr>
-  </li>
-  `;
-  },
+      <li class="book" style="list-style:none;">
+        <p>${title}</p>
+        <p>${author}</p>
+        <button class="remove" data-id=${id}>Remove</button>
+        <hr>
+      </li>
+    `;
+  }
 
   /**
    * @function render - helper function to render HTML on page
@@ -30,8 +28,10 @@ export const utilsObj = {
    * @param {number} id - The id assigned to the button
    */
   render(title, author, id) {
-    document.querySelector('#lists').insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
-  },
+    document
+      .querySelector('#lists')
+      .insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
+  }
 
   /**
    * @function clearInput - helper function to clear inputs on add
@@ -39,5 +39,5 @@ export const utilsObj = {
   clearInput() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
-  },
-};
+  }
+}

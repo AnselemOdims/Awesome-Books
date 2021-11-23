@@ -1,4 +1,6 @@
-import { helperObj } from './helpers.js';
+import Helper from './helpers.js';
+
+const helperObj = new Helper();
 
 // display the books in the localStorage on load
 helperObj.display();
@@ -7,9 +9,7 @@ helperObj.display();
 document.querySelector('#add-btn').addEventListener('click', () => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  if (title === '' || author === '') {
-    return;
-  }
+  if (title === '' || author === '') return;
   helperObj.add(title, author);
   document.querySelectorAll('.remove').forEach((elem) => {
     elem.addEventListener('click', (e) => helperObj.remove(e, e.currentTarget.dataset.id));
