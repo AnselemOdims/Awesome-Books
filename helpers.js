@@ -40,6 +40,7 @@ export default class Helper {
     const remStack = stack.filter((item) => item.id !== id);
     localStorage.setItem('books', JSON.stringify(remStack));
     e.currentTarget.parentElement.remove();
+    if (remStack.length === 0) noBook.textContent = 'No book added yet';
   }
 
   /**

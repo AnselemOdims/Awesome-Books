@@ -59,7 +59,7 @@ form {
 }
 
 .form-controls input {
-	padding: 8px 15px;
+	padding: 10px 15px;
 	width: 100%;
 }
 
@@ -69,7 +69,7 @@ form {
 }
 
 .form-btn button {
-	padding: 8px 40px;
+	/* padding: 8px 40px; */
 	border: none;
 	background: #6070ff;
 	color: #fff;
@@ -88,15 +88,4 @@ form {
 .form-btn button:disabled {
   background: #acacad;
   color: rgb(41, 41, 41);
-}
-
-/* List card styles */
-.legend {
-  border: solid 2px #6070ff;
-  padding: 20px;
-}
-
-.book {
-  display: flex;
-  justify-content: space-between;
 }
