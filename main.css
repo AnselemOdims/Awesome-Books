@@ -44,22 +44,33 @@ main {
 	width: 100px;
 	height: 2px;
 	margin: auto;
-  border: none;
+	border: none;
 	background: #6070ff;
 }
 
-
 /* Form Styles */
 form {
-  width: 60%;
-  margin: 0 auto;
+	width: 60%;
+	margin: 0 auto;
 }
 
 .form-controls {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 .form-controls input {
-  padding: 8px 15px;
-  width: 100%;
+	padding: 8px 15px;
+	width: 100%;
+}
+
+.form-btn {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.form-btn button {
+	padding: 8px 40px;
+	border: none;
+	background-color: #6070ff;
+	color: #fff;
 }
