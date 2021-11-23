@@ -151,7 +151,20 @@ form {
   font-weight: bold;
 }
 
-@media(min-width: 768px) {
+form .error {
+  color: red;
+  font-size: 12px;
+}
+
+.books:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.books h2 {
+  margin: 50px 0;
+}
+
+@media (min-width: 768px) {
   .book button {
     padding: 10px 50px;
   }
