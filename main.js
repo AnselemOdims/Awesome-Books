@@ -1,4 +1,6 @@
-import { helperObj } from './helpers.js';
+import { Helper } from './helpers.js';
+
+const helperObj = new Helper();
 
 // display the books in the localStorage on load
 helperObj.display();
