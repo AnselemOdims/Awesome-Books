@@ -13,10 +13,8 @@ export default class Utils {
   displayHTML(title, author, id) {
     return `
       <li class="book" style="list-style:none;">
-        <p>${title}</p>
-        <p>${author}</p>
+        <p>"${title}" by ${author}</p>
         <button class="remove" data-id=${id}>Remove</button>
-        <hr>
       </li>
     `;
   }
