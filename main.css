@@ -137,3 +137,12 @@ form {
   cursor: pointer;
   color: #fff;
 }
+
+.book p .title{
+  font-weight: bold;
+}
+
+.book p .author {
+ color: #6070ff;
+ font-weight: bold;
+}
