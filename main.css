@@ -97,3 +97,28 @@ form {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  position: relative;
+  -webkit-animation:  slide-right 1s;
+  -moz-animation:  slide-right 1s;
+  animation:  slide-right 1s;
+}
+
+@keyframes slide-right {
+  from {
+    right: -800px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
