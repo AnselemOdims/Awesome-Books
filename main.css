@@ -71,6 +71,21 @@ form {
 .form-btn button {
 	padding: 8px 40px;
 	border: none;
-	background-color: #6070ff;
+	background: #6070ff;
 	color: #fff;
+  cursor: pointer;
+  transition: background ease-out 0.5s 0.2s;
+}
+
+.form-btn button:hover {
+  background: #4958da;
+}
+
+.form-btn button:focus {
+  background: #3041db;
+}
+
+.form-btn button:disabled {
+  background: #acacad;
+  color: rgb(41, 41, 41);
 }
