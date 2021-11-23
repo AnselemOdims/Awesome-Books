@@ -12,6 +12,7 @@
 body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
+  background: #f4f5f7;
 }
 
 ul li {
@@ -23,7 +24,6 @@ a {
 }
 
 main {
-  background: #f4f5f7;
   width: 100%;
   height: 100vh;
 }
@@ -41,7 +41,7 @@ main {
 
 /* Line */
 .line {
-  width: 100px;
+  width: 50px;
   height: 2px;
   margin: auto;
   border: none;
@@ -81,6 +81,15 @@ form {
   font-family: Poppins, sans-serif;
 }
 
+.book button {
+  background: #fff;
+  border: solid 2px rgb(196, 5, 5);
+  padding: 4px 20px;
+  transition: background ease-out 0.5s 0.1s;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
 .form-btn button:hover {
   background: #4958da;
 }
@@ -110,9 +119,9 @@ form {
   padding: 15px;
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
   position: relative;
-  -webkit-animation: slide-right 1s;
-  -moz-animation: slide-right 1s;
-  animation: slide-right 1s;
+  -webkit-animation: slide-right ease-out 1s;
+  -moz-animation: slide-right ease-out 1s;
+  animation: slide-right ease-out 1s;
 }
 
 @keyframes slide-right {
@@ -125,15 +134,6 @@ form {
     right: 0;
     opacity: 1;
   }
-}
-
-.book button {
-  background: #fff;
-  border: solid 2px rgb(196, 5, 5);
-  padding: 4px 20px;
-  transition: background ease-out 0.5s 0.1s;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
 }
 
 .book button:hover {
