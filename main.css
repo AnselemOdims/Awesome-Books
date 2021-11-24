@@ -1,5 +1,5 @@
 /* Google font import */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;300&display=swap');
 
 /* Reset Styles */
 * {
@@ -11,7 +11,7 @@
 /* Global styles */
 body {
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #f4f5f7;
   position: relative;
 }
@@ -67,6 +67,13 @@ nav ul li a.active {
   transition: border-bottom ease-out 0.5s 0.1s;
 }
 
+/* Date */
+.date {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+}
+
 main {
   width: 100%;
 }
@@ -75,7 +82,7 @@ main {
 .books {
   padding: 0 20px;
   display: none;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 230px);
 }
 
 .books.active {
@@ -129,7 +136,7 @@ form {
   border: solid 2px rgb(196, 5, 5);
   padding: 4px 20px;
   transition: background ease-out 0.5s 0.1s;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }
 
