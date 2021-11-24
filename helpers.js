@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 
 import Utils from './utils.js';
@@ -47,21 +48,37 @@ export default class Helper {
    * @function display - helper function to display books on load
    */
   display() {
-    const stack = JSON.parse(localStorage.getItem('books'));
-    if (stack.length > 0) {
+    const stack = JSON.parse(localStorage.getItem('books')) || [];
+    if (stack.length === 0) {
+      noBook.textContent = 'No book added yet';
+    } else {
       stack.forEach((item) => {
         const { id, title, author } = item;
         utilsObj.render(title, author, id);
         document.querySelector('#title').focus();
         noBook.textContent = '';
       });
-    } else {
-      noBook.textContent = 'No book added yet';
     }
     document.querySelectorAll('.remove').forEach((elem) => {
       elem.addEventListener('click', (e) => {
         this.remove(e, e.currentTarget.dataset.id);
       });
     });
+  }
+
+  /**
+   * @fucntion navHandler - handles the single page navigation
+   * @param {event Object} e - the event object
+   */
+  navHandler(e) {
+    const { content } = e.currentTarget.dataset;
+    document.querySelector('.books.active').classList.remove('active');
+    document.querySelector(`${content}`).classList.add('active');
+    document.querySelector('.links.active').classList.remove('active');
+    e.currentTarget.classList.add('active');
+  }
+
+  dateHandler() {
+    document.querySelector('.date p').innerText = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
   }
 }
