@@ -207,3 +207,16 @@ form .error {
     padding: 10px 50px;
   }
 }
+
+/* Footer styles */
+footer {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #9e9e9e;
+}
