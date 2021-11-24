@@ -64,4 +64,16 @@ export default class Helper {
       });
     });
   }
+
+  /**
+   * @fucntion navHandler - handles the single page navigation
+   * @param {event Object} e - the event object
+   */
+  navHandler(e) {
+    const { content } = e.currentTarget.dataset;
+    document.querySelector('.books.active').classList.remove('active');
+    document.querySelector(`${content}`).classList.add('active');
+    document.querySelector('.links.active').classList.remove('active');
+    e.currentTarget.classList.add('active');
+  }
 }

@@ -19,3 +19,8 @@ document.querySelector('#add-btn').addEventListener('click', () => {
     elem.addEventListener('click', (e) => helperObj.remove(e, e.currentTarget.dataset.id));
   });
 });
+
+// Handle single page functionality
+document.querySelectorAll('.links').forEach((link) => {
+  link.addEventListener('click', helperObj.navHandler);
+});

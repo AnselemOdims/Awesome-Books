@@ -64,6 +64,7 @@ nav ul li {
 nav ul li a.active {
   color: #6070ff;
   border-bottom: solid 2px #6070ff;
+  transition: border-bottom ease-out 0.5s 0.1s;
 }
 
 main {
