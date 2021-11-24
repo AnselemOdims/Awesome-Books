@@ -1,3 +1,4 @@
+// import { DateTime } from 'luxon';
 import Helper from './helpers.js';
 
 const helperObj = new Helper();
@@ -5,7 +6,7 @@ const helperObj = new Helper();
 // display the books in the localStorage on load
 helperObj.display();
 
-// Event listener for the addition to localStorage and rendering of HTML to page
+// Event listener for the addition to localnow(M)L to page
 document.querySelector('#add-btn').addEventListener('click', () => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
@@ -24,3 +25,5 @@ document.querySelector('#add-btn').addEventListener('click', () => {
 document.querySelectorAll('.links').forEach((link) => {
   link.addEventListener('click', helperObj.navHandler);
 });
+
+setInterval(helperObj.dateHandler, 1000);

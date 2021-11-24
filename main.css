@@ -9,6 +9,10 @@
 }
 
 /* Global styles */
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
@@ -28,14 +32,17 @@ a {
 /* Header Styles */
 header {
   height: 60px;
+  width: 100%;
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 15px;
+  padding: 20px 10px;
   background: #fff;
-  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+  width: 100%;
 }
 
 nav .logo {
@@ -50,7 +57,7 @@ nav .logo img {
 
 nav .logo p {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 nav ul {
@@ -59,12 +66,18 @@ nav ul {
 
 nav ul li {
   margin: 0 10px;
+  font-size: 12px;
+}
+
+nav ul li a:hover {
+  color: #6070ff;
 }
 
 nav ul li a.active {
   color: #6070ff;
   border-bottom: solid 2px #6070ff;
   transition: border-bottom ease-out 0.5s 0.1s;
+  padding-bottom: 3px;
 }
 
 /* Date */
@@ -72,6 +85,10 @@ nav ul li a.active {
   display: flex;
   justify-content: flex-end;
   padding: 40px;
+}
+
+.date p {
+  font-weight: bold;
 }
 
 main {
@@ -82,14 +99,14 @@ main {
 .books {
   padding: 0 20px;
   display: none;
-  height: calc(100vh - 230px);
+  height: calc(100vh - 310px);
 }
 
 .books.active {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 
 .books h2,
@@ -218,7 +235,7 @@ form .error {
   align-items: center;
 }
 
-.books:nth-of-type(3) h2 {
+#contact h2 {
   margin: 10px 0;
 }
 
@@ -226,7 +243,7 @@ form .error {
   width: 70%;
 }
 
-.books:nth-of-type(3) .contact-details {
+.contact-details {
   margin-top: 40px;
 }
 
@@ -234,7 +251,7 @@ form .error {
   padding: 6px 0;
 }
 
-.books:nth-of-type(3) .contact-details ul li a {
+.contact-details ul li a {
   text-decoration: underline;
   font-weight: bold;
 }
@@ -254,6 +271,19 @@ footer p {
 }
 
 @media (min-width: 768px) {
+  header nav {
+    padding: 20px 40px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  nav .logo p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
   .book button {
     padding: 10px 50px;
   }

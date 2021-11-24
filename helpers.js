@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 
 import Utils from './utils.js';
@@ -75,5 +76,9 @@ export default class Helper {
     document.querySelector(`${content}`).classList.add('active');
     document.querySelector('.links.active').classList.remove('active');
     e.currentTarget.classList.add('active');
+  }
+
+  dateHandler() {
+    document.querySelector('.date p').innerText = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
   }
 }
