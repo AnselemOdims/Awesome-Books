@@ -27,15 +27,15 @@ export default class Utils {
    */
   render(title, author, id) {
     document
-      .querySelector('#lists')
-      .insertAdjacentHTML('beforeend', this.displayHTML(title, author, id));
+      .querySelector("#lists")
+      .insertAdjacentHTML("beforeend", this.displayHTML(title, author, id));
   }
 
   /**
    * @function clearInput - helper function to clear inputs on add
    */
   clearInput() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#author').value = '';
+    document.querySelector("#title").value = "";
+    document.querySelector("#author").value = "";
   }
 }
