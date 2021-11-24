@@ -15,15 +15,15 @@
           <p>Awesome Books</p>
         </div>
         <ul>
-          <li><a href="#" class="active">Lists</a></li>
-          <li><a href="#">Add New</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="active" data-content="#books">Lists</a></li>
+          <li><a href="#" data-content="#add-book">Add New</a></li>
+          <li><a href="#" data-content="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <!-- View all books -->
-      <section class="books">
+      <section class="books active" id="books">
         <h2>All awesome Books</h2>
         <div class="legend">
           <p id="no-data"></p>
@@ -32,8 +32,7 @@
       </section>
 
       <!-- Add new book -->
-      <section class="books">
-        <hr class="line" />
+      <section class="books" id="add-book">
         <h2>Add a new book</h2>
         <form>
           <div class="form-controls">
@@ -50,7 +49,7 @@
       </section>
 
       <!-- Contact details -->
-      <section class="books">
+      <section class="books" id="contact">
         <h2>Contact Information</h2>
         <div class="contact-info">
           <p>Do have any questions or you just want to say "Hello"?</p>
@@ -65,7 +64,10 @@
               <a href="mailto:amaduskamara@gmail.com">amaduskamara@gmail.com</a>
             </li>
             <li>Phone Numbers: <b>+2347013703549</b> || <b>+23276716997</b></li>
-            <li>Our Addresses: <b>Lagos, Nigeria.</b> || <b>Freetown, Sierra Leone.</b></li>
+            <li>
+              Our Addresses: <b>Lagos, Nigeria.</b> ||
+              <b>Freetown, Sierra Leone.</b>
+            </li>
           </ul>
         </div>
       </section>
