@@ -40,8 +40,9 @@ header nav {
   justify-content: space-between;
   padding: 20px 10px;
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
-  rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
   width: 100%;
 }
 
@@ -55,9 +56,9 @@ nav .logo img {
   margin: 0 10px;
 }
 
-nav .logo p {
-  font-weight: bold;
-  font-size: 13px;
+footer p {
+  font-size: 10px;
+  color: #6b6a6a;
 }
 
 nav ul {
@@ -67,6 +68,11 @@ nav ul {
 nav ul li {
   margin: 0 10px;
   font-size: 12px;
+}
+
+.contact-details ul li a {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -87,10 +93,6 @@ nav ul li a.active {
   padding: 40px;
 }
 
-.date p {
-  font-weight: bold;
-}
-
 main {
   width: 100%;
 }
@@ -106,7 +108,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
 }
 
 .books h2,
@@ -251,11 +252,6 @@ form .error {
   padding: 6px 0;
 }
 
-.contact-details ul li a {
-  text-decoration: underline;
-  font-weight: bold;
-}
-
 /* Footer styles */
 footer {
   width: 100%;
@@ -263,11 +259,16 @@ footer {
   line-height: 60px;
   background-color: #fff;
   text-align: center;
+  margin-top: 80px;
 }
 
-footer p {
-  font-size: 14px;
-  color: #6b6a6a;
+.date p {
+  font-weight: bold;
+}
+
+nav .logo p {
+  font-weight: bold;
+  font-size: 13px;
 }
 
 @media (min-width: 768px) {
@@ -279,6 +280,10 @@ footer p {
     font-size: 16px;
   }
 
+  footer p {
+    font-size: 14px;
+  }
+
   nav .logo p {
     font-weight: bold;
     font-size: 18px;
@@ -286,5 +291,13 @@ footer p {
 
   .book button {
     padding: 10px 50px;
+  }
+
+  .books.active {
+    margin-top: 80px;
+  }
+
+  footer {
+    margin-top: 0;
   }
 }
