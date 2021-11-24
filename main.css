@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   background: #f4f5f7;
+  position: relative;
 }
 
 ul li {
@@ -63,7 +64,6 @@ nav ul li a.active {
 
 main {
   width: 100%;
-  height: 100vh;
 }
 
 /* Books Styles */
@@ -202,10 +202,33 @@ form .error {
   margin: 50px 0;
 }
 
-@media (min-width: 768px) {
-  .book button {
-    padding: 10px 50px;
-  }
+/* Contact section */
+
+.books:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.books:nth-of-type(3) .contact-info {
+  width: 70%;
+}
+
+.books:nth-of-type(3) .contact-info p: {
+
+}
+
+.books:nth-of-type(3) .contact-details {
+  margin-top: 40px;
+}
+
+.books:nth-of-type(3) .contact-details ul li {
+  padding: 6px 0;
+}
+
+.books:nth-of-type(3) .contact-details ul li a{
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Footer styles */
@@ -214,9 +237,16 @@ footer {
   background-color: #fff;
   text-align: center;
   padding: 30px;
+  margin-top: 50px;
 }
 
 footer p {
   font-size: 14px;
   color: #9e9e9e;
+}
+
+@media (min-width: 768px) {
+  .book button {
+    padding: 10px 50px;
+  }
 }
