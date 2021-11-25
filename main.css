@@ -101,7 +101,15 @@ main {
 .books {
   padding: 0 20px;
   display: none;
+}
+
+.books:not(.all) {
   height: calc(100vh - 310px);
+}
+
+.all {
+  margin-bottom: calc(100vh - 530px);
+  margin-top: 0;
 }
 
 .books.active {
